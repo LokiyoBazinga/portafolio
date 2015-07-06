@@ -1,3 +1,7 @@
+html{
+	font-size: 16px;
+	font-family: Merriweather;
+}
 nav{
 	margin: 0;
 	padding: 0;
@@ -16,11 +20,12 @@ nav{
 position: absolute;
   left: 0;
   right: 0;
+  top: 75px;
   z-index: 10;
  width: 100%;
- height: 600px;
+ height: 550px;
  display: block;
- background-image: url(../img/codigo.jpg);
+ background-image: url(../img/keyboard.jpg);
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
@@ -86,6 +91,23 @@ img{
 }
 .border {
   border-color: rgba(145, 43, 43, 0.8);
+}
+.title_center{
+	margin: 0 auto;
+	max-width: 800px;
+	text-align: center;
+	color: white;
+}
+.title{
+	font-size: 2rem;
+  	font-family: Lato;
+  	font-weight: 700;
+  	margin-bottom: 0;
+}
+.title_description{
+	font-size: 1rem;
+  	max-width: 480px;
+  	margin: 0 auto;
 }
 @font-face {
 	font-family: 'ecoicon';
