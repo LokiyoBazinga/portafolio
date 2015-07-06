@@ -2,16 +2,15 @@ html{
 	font-size: 16px;
 	font-family: Merriweather;
 }
-nav{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: 0 0;
-	display: block;
-	z-index: 2;
+ul{
+	margin: 0 0;
+	padding: 0 0;
+}
+.navnav{
+	background: #000;
+	position: relative;
+	z-index:13;
+	max-height: 70px;
 }
 .padding{
 	padding: 2rem;
@@ -20,8 +19,7 @@ nav{
 position: absolute;
   left: 0;
   right: 0;
-  top: 75px;
-  z-index: 10;
+  top: 65px;
  width: 100%;
  height: 550px;
  display: block;
@@ -59,7 +57,7 @@ img.center{
 	margin: 0 auto;
 }
 .logo-front{
-	z-index: 2;
+	z-index: 12;
 	left: 0;
 	transition: transform .5s ease-in-out;
 	-ms-transition: transform .5s ease-in-out;
@@ -78,7 +76,7 @@ img{
 	transform:rotate(-14deg);
 }
 .logo-back{
-	z-index: 1;
+	z-index: 11;
 	margin-bottom: -120px!important;
 	top: -156px;
 	left: 0;
@@ -97,17 +95,22 @@ img{
 	max-width: 800px;
 	text-align: center;
 	color: white;
+	z-index: 12;
 }
 .title{
 	font-size: 2rem;
   	font-family: Lato;
   	font-weight: 700;
   	margin-bottom: 0;
+  	position: relative;
+  	z-index: 12;
 }
 .title_description{
 	font-size: 1rem;
   	max-width: 480px;
   	margin: 0 auto;
+  	position: relative;
+  	z-index: 12;
 }
 @font-face {
 	font-family: 'ecoicon';
@@ -119,34 +122,25 @@ img{
 	font-weight: normal;
 	font-style: normal;
 }
-.hi-icon-bookmark:before {
-	content: "\e011";
-}
+
 .hi-icon-wrap {
 	text-align: center;
 	margin: 0 auto;
-	position: relative;
+	padding: 2em 0 3em;
 }
-.hi-container{
-	position: relative;
-	top: -50px;
-	background: rgba(19, 88, 194, 0.92);
-	width: 100%;
-	height: auto;
-}
+
 .hi-icon {
 	display: inline-block;
 	font-size: 0px;
 	cursor: pointer;
-	margin: 15px 30px;
-	width: 50px;
-	height: 50px;
+	margin: 8px 30px;
+	width: 55px;
+	height: 55px;
 	border-radius: 50%;
 	text-align: center;
 	position: relative;
 	z-index: 1;
 	color: #fff;
-	border: 3px solid #fff;
 }
 
 .hi-icon:after {
@@ -165,7 +159,7 @@ img{
 	font-family: 'ecoicon';
 	speak: none;
 	font-size: 28px;
-	line-height: 50px;
+	line-height: 55px;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -173,83 +167,118 @@ img{
 	display: block;
 	-webkit-font-smoothing: antialiased;
 }
-.hi-icon-effect-8 .hi-icon {
-	background: rgba(255, 255, 255, 0.1);
-	-webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
-	-moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
-	transition: transform ease-out 0.1s, background 0.2s;
+
+.hi-icon-mobile:before {
+	content: "\e009";
 }
 
-.hi-icon-effect-8 .hi-icon:after {
-	top: 0;
-	left: 0;
-	padding: 0;
-	z-index: -1;
-	box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
-	opacity: 0;
-	-webkit-transform: scale(0.9);
-	-moz-transform: scale(0.9);
-	-ms-transform: scale(0.9);
-	transform: scale(0.9);
-}
-.hi-icon-effect-8 .hi-icon:active {
-		border: 1.5px solid #fff;
-}
-.hi-icon-effect-8 .hi-icon:hover {
-	background: rgba(255,255,255,0.05);
-	-webkit-transform: scale(0.93);
-	-moz-transform: scale(0.93);
-	-ms-transform: scale(0.93);
-	transform: scale(0.93);
-	color: #fff;
-	border: 1.5px solid #fff;
+.hi-icon-screen:before {
+	content: "\e00a";
 }
 
-.hi-icon-effect-8 .hi-icon:hover:after {
-	-webkit-animation: sonarEffect .5s ease-out 75ms;
-	-moz-animation: sonarEffect .5s ease-out 75ms;
-	animation: sonarEffect .5s ease-out 75ms;
+.hi-icon-earth:before {
+	content: "\e002";
 }
 
-@-webkit-keyframes sonarEffect {
-	0% {
-		opacity: 0.3;
-	}
-	40% {
-		opacity: 0.5;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255,255,255,0.5);
-	}
-	100% {
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255,255,255,0.5);
-		-webkit-transform: scale(1.5);
-		opacity: 0;
-	}
+.hi-icon-support:before {
+	content: "\e000";
 }
-@-moz-keyframes sonarEffect {
-	0% {
-		opacity: 0.3;
-	}
-	40% {
-		opacity: 0.5;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255,255,255,0.5);
-	}
-	100% {
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255,255,255,0.5);
-		-moz-transform: scale(1.5);
-		opacity: 0;
-	}
+
+.hi-icon-locked:before {
+	content: "\e001";
 }
-@keyframes sonarEffect {
-	0% {
-		opacity: 0.3;
-	}
-	40% {
-		opacity: 0.5;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255,255,255,0.5);
-	}
-	100% {
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255,255,255,0.5);
-		transform: scale(1.5);
-		opacity: 0;
-	}
+
+.hi-icon-cog:before {
+	content: "\e003";
+}
+
+.hi-icon-clock:before {
+	content: "\e004";
+}
+
+.hi-icon-videos:before {
+	content: "\e005";
+}
+
+.hi-icon-list:before {
+	content: "\e006";
+}
+
+.hi-icon-refresh:before {
+	content: "\e007";
+}
+
+.hi-icon-images:before {
+	content: "\e008";
+}
+
+.hi-icon-pencil:before {
+	content: "\e00b";
+}
+
+.hi-icon-link:before {
+	content: "\e00c";
+}
+
+.hi-icon-mail:before {
+	content: "\e00d";
+}
+
+.hi-icon-location:before {
+	content: "\e00e";
+}
+
+.hi-icon-archive:before {
+	content: "\e00f";
+}
+
+.hi-icon-chat:before {
+	content: "\e010";
+}
+
+.hi-icon-bookmark:before {
+	content: "\e011";
+}
+
+.hi-icon-user:before {
+	content: "\e012";
+}
+
+.hi-icon-contract:before {
+	content: "\e013";
+}
+
+.hi-icon-star:before {
+	content: "\e014";
+}
+
+/* Effect 6 */
+.hi-icon-effect-6 .hi-icon {
+	box-shadow: 0 0 0 4px rgba(255,255,255,1);
+	-webkit-transition: background 0.2s, color 0.2s;
+	-moz-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+
+.hi-icon-effect-6 .hi-icon:hover {
+	background: rgba(255,255,255,1);
+	color: #1358c2;
+}
+
+.hi-icon-effect-6 .hi-icon:hover:before {
+	-webkit-animation: spin 2s linear infinite;
+	-moz-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}  
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
