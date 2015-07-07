@@ -10,7 +10,7 @@ ul{
 	background: #000;
 	position: relative;
 	z-index:13;
-	max-height: 70px;
+	max-height: 50px;
 	top: 70px;
 }
 .padding{
@@ -116,7 +116,6 @@ img{
 }
 .logoTop{
 	width: 100%;
-	max-width: 1900px;
 	z-index: -10;
 	position: fixed;
 	height: 70px;
@@ -135,7 +134,32 @@ img{
 	top: 60px;
 }
 .padding2{
-	padding: 5rem;
+	padding: 2rem;
+	top: 70px;
+	position: relative;
+}
+.navbar ul{
+	list-style-type: none;
+	display: inline-block;
+	float: right; 
+	color: white;
+	position: relative;
+	top: -60px;
+	left: -28px; 
+	line-height: 70px;
+}
+.navbar li{
+	display: inline-block;
+	margin: 0;
+}
+.navbar a{
+	padding: .8em;
+}
+.navbar a:hover{
+	border-bottom: 6px solid #fff;
+  	text-decoration: none;
+  	border-top: 6px solid #fff;
+  	
 }
 @font-face {
 	font-family: 'ecoicon';
