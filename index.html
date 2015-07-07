@@ -8,11 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
 	<!--<link rel="shortcut icon" href="../favicon.ico"> -->
 </head>
-<body>
+<body style="position: relative; min-height: 100%; top: 0px;">
+<div id="logoTop" class="logoTop">
+	<p >Hola Mundo!!!</p>
+</div>
 	<header>
-		<nav class="navnav">
+		<nav id="navnav" class="navnav">
 			<ul>
-				<li><div class="hi-icon-effect-6">
+				<li><div id="engrane" class="">
 					<a href="#set-8" class="hi-icon hi-icon-cog"></a>
 				</div></li>
 			</ul>
@@ -24,8 +27,8 @@
 				<a href="#Aqui URL" class="boton3d colorBoton formaBoton botonAcomodo colorAmarillo">Contacto</a>
 			</div>-->
 	</header>
-	<div class="back_img"></div>
-	<div class="cover-mask padding">
+	<div id="back" class="back_img"></div>
+	<div id="cover" class="cover-mask padding">
 		<nav>
 			<a href="" title="" class="inline" >
 			<img id="logo" src="http://mpe-s1-p.mlstatic.com/megamind-mega-mente-rival-de-metroman-377-MPE2912105932_072012-O.jpg" alt="mega mente" class="logo logo-front center border circle">
@@ -40,12 +43,34 @@
 			</div>
 			<h4 class="title_description">Creacion de WEB APP y MOVIL APP con las mejores herramientas: HTML5, CSS3, PHP, JOOMLA, RUBY ON RAILS, ANDROID, IOS</h4>
 		</div>
+	<div id="result" style="color:#000;widht:100%;height:1000px;"></div>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
 			jQuery("#logo").mouseover(function(){
 				jQuery("#logoback").addClass("logo-back-show");
 			}).mouseout(function(){
 				jQuery("#logoback").removeClass("logo-back-show");
+			});
+			var nav = jQuery("#navnav");
+			var posnav = nav.offset();
+			var logoTop = jQuery("#logoTop");
+			var engrane = jQuery("#engrane");
+			var back = jQuery("#back");
+			var cover =jQuery("#cover")
+			jQuery(window).scroll(function(){
+				if ($(this).scrollTop() > posnav.top) {
+					nav.addClass('navfix');
+					logoTop.addClass('none');
+					engrane.addClass('hi-icon-effect-6');
+					back.addClass('back_img2');
+					cover.addClass('padding2');
+				}else if($(this).scrollTop() <= posnav.top){
+					nav.removeClass('navfix');
+					logoTop.removeClass('none');
+					engrane.removeClass('hi-icon-effect-6');
+					back.removeClass('back_img2');
+					cover.removeClass('padding2');
+				}
 			});
 		});
 	</script>

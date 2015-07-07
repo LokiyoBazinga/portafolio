@@ -11,15 +11,17 @@ ul{
 	position: relative;
 	z-index:13;
 	max-height: 70px;
+	top: 70px;
 }
 .padding{
 	padding: 2rem;
+	margin-top: 70px;
 }
 .back_img{
 position: absolute;
   left: 0;
   right: 0;
-  top: 50px;
+  top: 120px;
  width: 100%;
  height: 550px;
  display: block;
@@ -111,6 +113,29 @@ img{
   	margin: 0 auto;
   	position: relative;
   	z-index: 12;
+}
+.logoTop{
+	width: 100%;
+	max-width: 1900px;
+	z-index: -10;
+	position: fixed;
+	height: 70px;
+	top: 0;
+	background-color: #666666; 
+}
+.none{
+	display: none;
+}
+.navfix{
+	position: fixed;
+	top: 0;
+	width: 100%
+}
+.back_img2{
+	top: 60px;
+}
+.padding2{
+	padding: 5rem;
 }
 @font-face {
 	font-family: 'ecoicon';
@@ -260,12 +285,12 @@ img{
 	transition: background 0.2s, color 0.2s;
 }
 
-.hi-icon-effect-6 .hi-icon:hover {
+.hi-icon-effect-6 .hi-icon {
 	background: rgba(255,255,255,1);
-	color: #1358c2;
+	color: #000;
 }
 
-.hi-icon-effect-6 .hi-icon:hover:before {
+.hi-icon-effect-6 .hi-icon:before {
 	-webkit-animation: spin 2s linear infinite;
 	-moz-animation: spin 2s linear infinite;
 	animation: spin 2s linear infinite;
