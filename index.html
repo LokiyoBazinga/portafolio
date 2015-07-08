@@ -10,7 +10,9 @@
 </head>
 <body style="position: relative; min-height: 100%; top: 0px;">
 <div id="logoTop" class="logoTop">
-	<p >Hola Mundo!!!</p>
+	<div style="margin-left:60px;">
+		<img src="img/nodeJs.png" alt="nodejs" width="200px" height="200px">
+	</div>
 </div>
 	<header>
 		<nav id="navnav" class="navnav">
@@ -18,7 +20,10 @@
 				<div id="engrane" style="width: 100px;">
 					<a href="#set-8" class="hi-icon hi-icon-cog"></a>
 				</div>
-				<ul style="">
+				<div style="margin-left:85px; position:relative;top:-44px; width:120px;" class="noshow" id="logomini">
+					<img src="img/nodeJs.png" alt="nodejs" width="100px" height="100px">
+				</div>
+				<ul id="listmenu">
 					<li>
 						<a href="" title="">Inicio</a>
 					</li>
@@ -53,7 +58,7 @@
 	</div>
 			<div class="title_center">
 			<div class="title">
-				<h3>Daniel Alejandro Anguiano | Desarrollo </br>Web y Movil</h3>	
+				<h3>Daniel Alejandro Anguiano </br> Desarrollo Web y Movil</h3>	
 			</div>
 			<h4 class="title_description">Creacion de WEB APP y MOVIL APP con las mejores herramientas: HTML5, CSS3, JAVASCRIPT, JQUERY, PHP, JOOMLA, RUBY ON RAILS, ANDROID, IOS</h4>
 		</div>
@@ -72,7 +77,9 @@
 			var logoTop = jQuery("#logoTop");
 			var engrane = jQuery("#engrane");
 			var back = jQuery("#back");
-			var cover =jQuery("#cover")
+			var cover =jQuery("#cover");
+			var logomini  = jQuery("#logomini");
+			var listmenu  = jQuery("#listmenu ");
 			jQuery(window).scroll(function(){
 				if ($(this).scrollTop() > posnav.top) {
 					nav.addClass('navfix');
@@ -80,12 +87,18 @@
 					engrane.addClass('hi-icon-effect-6');
 					back.addClass('back_img2');
 					cover.addClass('padding2');
+					logomini.addClass('show');
+					logomini.removeClass('noshow');
+					listmenu .css('top','-88px');
 				}else if($(this).scrollTop() <= posnav.top){
 					nav.removeClass('navfix');
 					logoTop.removeClass('none');
 					engrane.removeClass('hi-icon-effect-6');
 					back.removeClass('back_img2');
 					cover.removeClass('padding2');
+					logomini.removeClass('show');
+					logomini.addClass('noshow');
+					listmenu .css('top','-60px');
 				}
 			});
 		});
